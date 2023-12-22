@@ -22,7 +22,7 @@ int main()
 
 	}
 
-	printf("min=%d\n", arr[0]);
+	
 	for (int i = 0; i < num; i++)
 	{
 		printf("%d ", arr[i]);
