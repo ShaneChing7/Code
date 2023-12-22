@@ -1,21 +1,31 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
+#define num 10
 int main()
 {
-	int a[10] = {3,4,2,1,6,5,9,7,8,10};
-	int i , j , t ;
-	for (i = 0; i < 9; i++)
-		for (j = 0; j < 9 - i; j++)
+	int arr[num] = { 0 };
+	int min = 0;
+	for (int i = 0; i < num; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	for (int i = 0; i < num; i++)
+	{
+		for (int j = 0; j < num - 1; j++)
 		{
-			if (a[j] > a[j + 1])
+			if (arr[j] > arr[j + 1])
 			{
-				t = a[j];
-				a[j] = a[j + 1];
-				a[j + 1] = t;
+				int a = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = a;
 			}
 		}
-	for (i = 0; i < 10; i++)
-		printf("%d ", a[i]);
 
-	return 0;
+	}
+
+	printf("min=%d\n", arr[0]);
+	for (int i = 0; i < num; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+
 }
