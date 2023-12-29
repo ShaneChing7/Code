@@ -18,11 +18,11 @@ int fun(char* a)
 	{
 		int value = arr[a[i] - 'A'];
 		if (i < n - 1 && value < arr[a[i + 1] - 'A'])
-			ans = -value+ans;
+			ans = -value + ans;
 		else
-			ans = value+ans;
+			ans = value + ans;
 	}
-			return ans;
+	return ans;
 }
 
 int main()
