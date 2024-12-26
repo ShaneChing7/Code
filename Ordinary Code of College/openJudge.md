@@ -110,7 +110,7 @@ public class 大整数加法 {
         }
 
         // 将结果翻转并输出
-        System.out.println(result.reverse().toString());
+        System.out.println(result.reverse());
 
         scanner.close();
     }
